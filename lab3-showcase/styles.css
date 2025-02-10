@@ -1,0 +1,9 @@
+.description {
+    width: 500px;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 10px;
+}
