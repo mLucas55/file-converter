@@ -1,8 +1,11 @@
 import os
-from flask import Flask, Flask, render_template, request, redirect, url_for, abort, send_from_directory
+from flask import Flask, render_template, request, redirect, url_for, abort, flash
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
+
+app.secret_key = 'super secret key'
+app.config['SESSION_TYPE'] = 'filesystem'
 
 app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
 app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.webp', '.avif', '.mp4']
@@ -22,8 +25,5 @@ def upload_files():
         if file_ext not in app.config['UPLOAD_EXTENSIONS']:
             abort(400)
         uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], filename))
+    flash('Upload Successful!', 'success')
     return redirect(url_for('index'))
-
-@app.route('/uploads/<filename>')
-def uploaded_file(filename):
-    return send_from_directory(app.config['UPLOAD_PATH'], filename)
