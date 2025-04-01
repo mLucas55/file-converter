@@ -11,17 +11,11 @@
     <div class="form-container">
         <h1>File Upload</h1>
         <form method="POST" action="" enctype="multipart/form-data">
-        <div class="form-group">
-            <input type="file" name="file" class="file-input">        
-            <p><input type="submit" value="submit" class="submit-btn"></p>
-        </div>
+            <div class="form-group">
+                <input type="file" name="file" class="file-input">        
+                <p><input type="submit" value="submit" class="submit-btn"></p>
+            </div>
         </form>
-
-        <div class="container">
-            {% for file in files %}
-                <img class="draggable" src="{{ url_for('uploaded_file', filename=file) }}" alt="{{ file }}" width="200">
-            {% endfor %}
-        </div>
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

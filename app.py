@@ -4,11 +4,8 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
-# 50 MB file size limit
 app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
-app.config['UPLOAD_EXTENSIONS'] = ['mp4', 'avi', 'mkv', 'mov', 'webm', 'flv', 'mpeg', 'wmv', 'hevc', 'h264',
-                                   'mp3', 'aac', 'wav', 'flac', 'ogg', 'wma', 'alac', 'opus', 'png', 'jpeg', 
-                                   'gif', 'bmp', 'tiff', 'webp']
+app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.webp', '.avif', '.mp4']
 app.config['UPLOAD_PATH'] = 'uploads'
 
 @app.route('/')
