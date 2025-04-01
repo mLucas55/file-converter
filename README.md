@@ -3,7 +3,8 @@
 Kathy, Lucas, Will, James
 
 
-SET UP FOR LOCAL MACHINE
+
+SET UP FOR LOCAL MACHINE:
 
 pip install flask
 
