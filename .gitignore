@@ -1,0 +1,5 @@
+static/output/*
+!static/output/.gitkeep
+uploads/*
+!uploads/.gitkeep
+__pycache__/*
