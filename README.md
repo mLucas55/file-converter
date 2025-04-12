@@ -2,10 +2,12 @@
 
 Kathy, Lucas, Will, James
 
+## SET UP FOR LOCAL MACHINE:
+```sh
+pip install -r requirements.txt
+```
 
-
-SET UP FOR LOCAL MACHINE:
-
-pip install flask
-
-Create /uploads folder in your local file structure
+## Execute
+```sh
+flask run
+```
