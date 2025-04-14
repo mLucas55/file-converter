@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #141414;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,8 @@ body {
 }
 
 .form-container {
-    background: hsl(193, 41%, 85%);
+    background: hsl(0, 0%, 15%);
+    color:rgb(222, 222, 222);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -21,27 +22,51 @@ body {
     align-items: center;
 }
 
-
 .submit-btn {
+    background-color: #141414;
+    color:rgb(222, 222, 222);
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #397862;
 }
 
 select {
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 input::file-selector-button {
     padding: 10px;
+    margin-right: 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+input::file-selector-button:hover{
+    background-color: #397862;
+    color:rgb(222, 222, 222);
+}
+
+input {
+    background-color: #191919;
+    border-radius: 4px;
+}
+
+.decor {
+    position: fixed;
+    left: 1fr;
+    top: 1fr;
+    z-index: -1;
+    width: 350px;
 }

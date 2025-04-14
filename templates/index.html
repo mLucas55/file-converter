@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Converter</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="form-container">
+        <!--
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 
@@ -18,7 +20,8 @@
             {% endif %}
         {% endwith %}
         {% block body %}{% endblock %}
-        <h1>File Converter</h1>
+        //-->
+        <h1>File Converter <i class="fa fa-cloud"></i></h1>
         <form method="POST" action="" enctype="multipart/form-data">
             <div class="form-group">
                 <input type="file" name="file" class="file-input">
@@ -32,5 +35,7 @@
             </div>
         </form>
     </div>
+
+    <img class="decor" src="https://img.icons8.com/ios7/512/FFFFFF/folder-invoices--v2.png">
 </body>
 </html>
